@@ -1,0 +1,25 @@
+img {
+  position: absolute;
+  top: 140px;
+  transform: perspective(50px) translate(417px) scale(0.20);
+  transform-origin: top;
+  visibility: hidden;
+}
+
+div {
+  position: relative;
+  height: 950px;
+  width: 985px;
+  transform: rotate(-2deg) scale(0.68);
+  margin-top: -135px;
+
+}
+
+#count{
+	visibility: hidden;
+}
+
+.img2 {
+}
+
+
