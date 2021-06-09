@@ -3,14 +3,26 @@ function flame(){
 	var count = document.getElementById("count").textContent;
 	var countInt = parseInt(count);
 
-	if (countInt<13) {
+	if (countInt<24) {
+
+		if (countInt>0) {
+		document.getElementById("dp"+countInt).style.visibility = "hidden";
+	}
+		countInt = countInt+1;
+		document.getElementById("dp"+countInt).style.visibility = "visible";
+		
+
+	if (countInt<14) {
 
 	
-		countInt = countInt+1;
-		document.getElementById("count").innerHTML = countInt;
+		
+		
 		document.getElementById("img"+countInt).style.visibility = "visible";
 	}
 
+	document.getElementById("count").innerHTML = countInt;
+
+}
 
 }
 
@@ -25,11 +37,19 @@ function KeyCheck(event){
 			var countInt = parseInt(count);
 		
 
-			if (countInt>0) {
+			if (countInt<24) {
 
-	
-				document.getElementById("img"+countInt).style.visibility = "hidden";
+				if (countInt<14) {
+					document.getElementById("img"+countInt).style.visibility = "hidden";
+
+				}
+
+				document.getElementById("dp"+countInt).style.visibility = "hidden";
+				
 				countInt = countInt-1;
+				if (countInt>0) {
+					document.getElementById("dp"+countInt).style.visibility = "visible";
+				}
 				document.getElementById("count").innerHTML = countInt;
 			}
       break; 
@@ -38,13 +58,27 @@ function KeyCheck(event){
 			var count = document.getElementById("count").textContent;
 			var countInt = parseInt(count);
 
-			if (countInt<13) {
+		
+				if (countInt<23) {
+
+					if (countInt>0) {
+						document.getElementById("dp"+countInt).style.visibility = "hidden";
+					}
+					countInt = countInt+1;
+					document.getElementById("dp"+countInt).style.visibility = "visible";
+		
+
+				if (countInt<14) {
 
 	
-				countInt = countInt+1;
-				document.getElementById("count").innerHTML = countInt;
-				document.getElementById("img"+countInt).style.visibility = "visible";
-			}
+		
+		
+					document.getElementById("img"+countInt).style.visibility = "visible";
+				}
+
+					document.getElementById("count").innerHTML = countInt;
+
+				}
       break;
 
       case 67:
